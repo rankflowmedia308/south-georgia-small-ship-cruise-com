@@ -52,11 +52,13 @@ build_page() {
     -e "s|src=\"/\([^\"]*\)\"|src=\"${BASE}\1\"|g" \
     "$FOOTER" > "$TMP_FOOTER"
 
-  # Process content: convert paths only
+  # Process content: convert paths only (href, src, and CSS url())
   sed \
     -e "s|href=\"/\"|href=\"${ROOT_HREF}\"|g" \
     -e "s|href=\"/\([^\"]*\)\"|href=\"${BASE}\1\"|g" \
     -e "s|src=\"/\([^\"]*\)\"|src=\"${BASE}\1\"|g" \
+    -e "s|url('/\([^']*\)')|url('${BASE}\1')|g" \
+    -e "s|url(\"/\([^\"]*\)\")|url(\"${BASE}\1\")|g" \
     "$CONTENT_FILE" > "$TMP_CONTENT"
 
   # Create output directory
