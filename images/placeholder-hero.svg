@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" width="1440" height="720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#122040"/>
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#152236"/>
+      <stop offset="100%" stop-color="#0E1C30"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0.5" y1="0" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#1B8A9A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1B8A9A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="720" fill="url(#heroGrad)"/>
+
+  <!-- Subtle radial glow behind text -->
+  <ellipse cx="720" cy="320" rx="500" ry="220" fill="#1B8A9A" opacity="0.06"/>
+
+  <!-- Mountain silhouettes — far range -->
+  <path d="M 0 620 L 80 500 L 160 560 L 260 440 L 370 530 L 460 460 L 560 520 L 640 430 L 740 490 L 820 410 L 920 470 L 1020 390 L 1120 460 L 1220 420 L 1320 480 L 1420 440 L 1440 450 L 1440 720 L 0 720 Z" fill="#122040"/>
+
+  <!-- Mountain silhouettes — mid range -->
+  <path d="M 0 660 L 120 560 L 200 600 L 300 530 L 420 590 L 520 540 L 620 580 L 700 510 L 800 570 L 900 520 L 1000 555 L 1100 490 L 1200 545 L 1300 510 L 1400 555 L 1440 540 L 1440 720 L 0 720 Z" fill="#0F1C30"/>
+
+  <!-- Glacier highlight strokes on mountains -->
+  <path d="M 640 430 L 660 460 L 680 445 L 700 470" stroke="#1B8A9A" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 410 L 845 445 L 865 430" stroke="#1B8A9A" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+  <path d="M 1020 390 L 1045 425 L 1065 410 L 1085 430" stroke="#1B8A9A" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+
+  <!-- Water / ocean at base -->
+  <rect x="0" y="660" width="1440" height="60" fill="#0A1825" opacity="0.8"/>
+  <!-- Subtle water shimmer lines -->
+  <line x1="100" y1="675" x2="300" y2="675" stroke="#1B8A9A" stroke-width="0.5" stroke-opacity="0.15"/>
+  <line x1="500" y1="682" x2="750" y2="682" stroke="#1B8A9A" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="900" y1="670" x2="1100" y2="670" stroke="#1B8A9A" stroke-width="0.5" stroke-opacity="0.10"/>
+  <line x1="1200" y1="678" x2="1380" y2="678" stroke="#1B8A9A" stroke-width="0.5" stroke-opacity="0.13"/>
+
+  <!-- Main title text -->
+  <text
+    x="720"
+    y="295"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Georgia', serif"
+    font-size="80"
+    font-weight="600"
+    letter-spacing="4"
+    fill="#1B8A9A"
+    opacity="0.9">South Georgia</text>
+
+  <!-- Decorative rule -->
+  <line x1="560" y1="320" x2="880" y2="320" stroke="#1B8A9A" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="720" cy="320" r="3" fill="#D4963A" opacity="0.7"/>
+
+  <!-- Subtitle text -->
+  <text
+    x="720"
+    y="360"
+    text-anchor="middle"
+    font-family="'DM Sans', 'Helvetica Neue', sans-serif"
+    font-size="16"
+    font-weight="400"
+    letter-spacing="3"
+    fill="#F5F7F9"
+    opacity="0.35">Hero Image — Add expedition photo here</text>
+</svg>

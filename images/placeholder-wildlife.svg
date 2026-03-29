@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="wlGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1B3A3E"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#122A2E"/>
+      <stop offset="100%" stop-color="#0D1F22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#wlGrad)"/>
+
+  <!-- Ground / rock area -->
+  <path d="M 0 310 Q 150 295 300 305 Q 450 315 600 300 L 600 400 L 0 400 Z" fill="url(#groundGrad)"/>
+
+  <!-- Subtle atmospheric glow -->
+  <ellipse cx="300" cy="230" rx="180" ry="100" fill="#1B8A9A" opacity="0.05"/>
+
+  <!-- Penguin group — 3 penguins at different sizes/positions -->
+
+  <!-- Penguin 1 — center, largest -->
+  <!-- Body -->
+  <ellipse cx="300" cy="255" rx="28" ry="36" fill="rgba(27,138,154,0.6)"/>
+  <!-- Head -->
+  <circle cx="300" cy="208" r="22" fill="rgba(27,138,154,0.6)"/>
+  <!-- White belly patch -->
+  <ellipse cx="300" cy="260" rx="16" ry="24" fill="rgba(245,247,249,0.12)"/>
+  <!-- Left flipper -->
+  <path d="M 272 228 Q 255 238 258 258 Q 268 248 274 252 Z" fill="rgba(10,22,40,0.5)"/>
+  <!-- Right flipper -->
+  <path d="M 328 228 Q 345 238 342 258 Q 332 248 326 252 Z" fill="rgba(10,22,40,0.5)"/>
+  <!-- Eye -->
+  <circle cx="308" cy="204" r="4" fill="rgba(245,247,249,0.5)"/>
+  <circle cx="309" cy="204" r="2" fill="rgba(10,22,40,0.8)"/>
+  <!-- Beak -->
+  <path d="M 295 214 L 300 224 L 305 214 Z" fill="rgba(212,150,58,0.7)"/>
+
+  <!-- Penguin 2 — left, smaller -->
+  <!-- Body -->
+  <ellipse cx="195" cy="270" rx="20" ry="26" fill="rgba(27,138,154,0.45)"/>
+  <!-- Head -->
+  <circle cx="195" cy="236" r="16" fill="rgba(27,138,154,0.45)"/>
+  <!-- White belly patch -->
+  <ellipse cx="195" cy="273" rx="11" ry="17" fill="rgba(245,247,249,0.09)"/>
+  <!-- Left flipper -->
+  <path d="M 175 250 Q 163 257 165 270 Q 172 263 177 266 Z" fill="rgba(10,22,40,0.4)"/>
+  <!-- Right flipper -->
+  <path d="M 215 250 Q 227 257 225 270 Q 218 263 213 266 Z" fill="rgba(10,22,40,0.4)"/>
+  <!-- Eye -->
+  <circle cx="200" cy="233" r="3" fill="rgba(245,247,249,0.4)"/>
+  <!-- Beak -->
+  <path d="M 192 242 L 195 249 L 198 242 Z" fill="rgba(212,150,58,0.6)"/>
+
+  <!-- Penguin 3 — right, slightly smaller -->
+  <!-- Body -->
+  <ellipse cx="405" cy="265" rx="22" ry="29" fill="rgba(27,138,154,0.5)"/>
+  <!-- Head -->
+  <circle cx="405" cy="227" r="18" fill="rgba(27,138,154,0.5)"/>
+  <!-- White belly patch -->
+  <ellipse cx="405" cy="268" rx="12" ry="19" fill="rgba(245,247,249,0.10)"/>
+  <!-- Left flipper -->
+  <path d="M 383 242 Q 369 250 371 264 Q 380 256 385 260 Z" fill="rgba(10,22,40,0.45)"/>
+  <!-- Right flipper -->
+  <path d="M 427 242 Q 441 250 439 264 Q 430 256 425 260 Z" fill="rgba(10,22,40,0.45)"/>
+  <!-- Eye -->
+  <circle cx="412" cy="224" r="3.5" fill="rgba(245,247,249,0.45)"/>
+  <!-- Beak -->
+  <path d="M 402 234 L 405 242 L 408 234 Z" fill="rgba(212,150,58,0.65)"/>
+
+  <!-- Small distant penguins in background -->
+  <ellipse cx="120" cy="298" rx="8" ry="11" fill="rgba(27,138,154,0.25)"/>
+  <circle cx="120" cy="283" r="6" fill="rgba(27,138,154,0.25)"/>
+
+  <ellipse cx="500" cy="292" rx="9" ry="12" fill="rgba(27,138,154,0.28)"/>
+  <circle cx="500" cy="276" r="7" fill="rgba(27,138,154,0.28)"/>
+
+  <ellipse cx="555" cy="296" rx="7" ry="9" fill="rgba(27,138,154,0.20)"/>
+  <circle cx="555" cy="284" r="5" fill="rgba(27,138,154,0.20)"/>
+
+  <!-- Label text -->
+  <text
+    x="300"
+    y="370"
+    text-anchor="middle"
+    font-family="'DM Sans', 'Helvetica Neue', sans-serif"
+    font-size="14"
+    font-weight="400"
+    letter-spacing="1.5"
+    fill="#F5F7F9"
+    opacity="0.4">Wildlife Photo</text>
+</svg>

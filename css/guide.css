@@ -1,0 +1,704 @@
+/* =============================================================
+   GUIDE PAGE — South Georgia Expedition Guide 2026
+   Page-specific styles for guide/article pages
+   ============================================================= */
+
+/* =============================================================
+   1. GUIDE HERO
+   ============================================================= */
+.guide-hero {
+  background-color: #0A1628;
+  background-size: cover;
+  background-position: center 65%;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 40, 0.2) 0%,
+    rgba(10, 22, 40, 0.55) 55%,
+    rgba(10, 22, 40, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.guide-hero__content {
+  position: relative;
+  z-index: 1;
+  color: #F5F7F9;
+  width: 100%;
+  max-width: 800px;
+}
+
+.guide-hero__eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #E8B060;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.guide-hero__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: #F5F7F9;
+}
+
+/* Amber accent on key words in guide title */
+.guide-hero__title em {
+  font-style: normal;
+  color: #E8B060;
+}
+
+.guide-hero__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(245, 247, 249, 0.8);
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.guide-hero__meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(245, 247, 249, 0.6);
+  letter-spacing: 0.04em;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(245, 247, 249, 0.12);
+  margin-top: 1.5rem;
+}
+
+.guide-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.guide-hero__meta-item strong {
+  color: rgba(245, 247, 249, 0.85);
+  font-weight: 500;
+}
+
+/* =============================================================
+   2. ARTICLE BODY
+   ============================================================= */
+.guide-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.guide-article p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4A5568;
+  margin-bottom: 1.25rem;
+}
+
+.guide-article > p:first-of-type {
+  font-size: 1.1rem;
+  color: #1A2840;
+  line-height: 1.75;
+}
+
+.guide-article h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #0A1628;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(27, 138, 154, 0.2);
+  line-height: 1.2;
+}
+
+.guide-article h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: #0A1628;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.guide-article ul,
+.guide-article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #4A5568;
+}
+
+.guide-article li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+}
+
+.guide-article strong {
+  color: #1A2840;
+  font-weight: 600;
+}
+
+.guide-article blockquote {
+  border-left: 3px solid #1B8A9A;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: rgba(27, 138, 154, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.guide-article blockquote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #1A2840;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =============================================================
+   3. SPECIES CARDS GRID
+   ============================================================= */
+.species-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .species-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.species-card {
+  display: flex;
+  gap: 1.25rem;
+  background: #F5F7F9;
+  border-radius: 12px;
+  padding: 1.25rem;
+  align-items: flex-start;
+  border: 1px solid #D8E0E8;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.species-card:hover {
+  box-shadow: 0 4px 16px rgba(10, 22, 40, 0.08);
+  transform: translateY(-2px);
+}
+
+.species-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0A1628;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.2);
+}
+
+.species-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.species-card__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0A1628;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.species-card__latin {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #1B8A9A;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.species-card__count {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #D4963A;
+  background: rgba(212, 150, 58, 0.1);
+  border: 1px solid rgba(212, 150, 58, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.species-card__fact {
+  font-size: 0.8rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+/* =============================================================
+   4. HISTORICAL TIMELINE
+   ============================================================= */
+.timeline {
+  list-style: none;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  border-left: 2px solid rgba(27, 138, 154, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1B8A9A;
+  border: 3px solid #F5F7F9;
+  box-shadow: 0 0 0 2px #1B8A9A;
+}
+
+.timeline-item__year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D4963A;
+  display: block;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.timeline-item__event {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0A1628;
+  margin-bottom: 0.4rem;
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.timeline-item__detail {
+  font-size: 0.85rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================================
+   5. FACT BOXES
+   ============================================================= */
+.fact-box {
+  background: rgba(27, 138, 154, 0.06);
+  border: 1px solid rgba(27, 138, 154, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.fact-box--amber {
+  background: rgba(212, 150, 58, 0.06);
+  border-color: rgba(212, 150, 58, 0.2);
+}
+
+.fact-box__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1B8A9A;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.fact-box--amber .fact-box__title {
+  color: #D4963A;
+}
+
+.fact-box__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .fact-box__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fact-box__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fact-box__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-box__item strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0A1628;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.fact-box__item span {
+  font-size: 0.8rem;
+  color: #4A5568;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.4;
+}
+
+/* =============================================================
+   6. PLACE CALLOUTS
+   ============================================================= */
+.place-callout {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #F5F7F9;
+  border-radius: 12px;
+  border: 1px solid #D8E0E8;
+}
+
+@media (min-width: 768px) {
+  .place-callout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.place-callout--highlight {
+  border-left: 4px solid #D4963A;
+  padding-left: calc(1.5rem - 3px);
+  background: rgba(212, 150, 58, 0.04);
+  border-color: #D8E0E8;
+  border-left-color: #D4963A;
+}
+
+.place-callout__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #122040;
+  border-radius: 12px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .place-callout__image {
+    aspect-ratio: unset;
+    width: 280px;
+    height: 186px;
+  }
+}
+
+.place-callout__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.place-callout:hover .place-callout__image img {
+  transform: scale(1.04);
+}
+
+.place-callout__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.place-callout__body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0A1628;
+  margin-bottom: 0.4rem;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.place-callout__body p {
+  font-size: 0.875rem;
+  color: #4A5568;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.place-callout__tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1B8A9A;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.place-callout--highlight .place-callout__tag {
+  color: #D4963A;
+}
+
+/* =============================================================
+   7. PLANNING CHECKLIST
+   ============================================================= */
+.planning-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.planning-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #D8E0E8;
+  font-size: 0.9rem;
+  color: #4A5568;
+  line-height: 1.55;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.planning-checklist li:last-child {
+  border-bottom: none;
+}
+
+.planning-checklist li::before {
+  content: "✓";
+  color: #1B8A9A;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.planning-checklist li strong {
+  color: #0A1628;
+  font-weight: 600;
+}
+
+/* =============================================================
+   8. GUIDE CTA BOX
+   ============================================================= */
+.guide-cta-box {
+  background: linear-gradient(135deg, #0A1628 0%, #0D2D40 60%, #0E3A4A 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  color: #F5F7F9;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-cta-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, rgba(212, 150, 58, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.guide-cta-box__eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #E8B060;
+  margin-bottom: 1rem;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.guide-cta-box__title,
+.guide-article .guide-cta-box__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  color: #F5F7F9 !important;
+  line-height: 1.2;
+  position: relative;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.guide-cta-box__text {
+  font-size: 0.95rem;
+  color: #F5F7F9;
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 8px rgba(10,22,40,0.4);
+}
+
+.guide-cta-box__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* =============================================================
+   GUIDE TOC (Table of Contents sidebar — optional)
+   ============================================================= */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .guide-layout {
+    grid-template-columns: 1fr 260px;
+  }
+}
+
+.guide-toc {
+  position: sticky;
+  top: 80px;
+  background: #F5F7F9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #D8E0E8;
+}
+
+.guide-toc__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1B8A9A;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.guide-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.guide-toc__list a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.825rem;
+  color: #4A5568;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  display: block;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+}
+
+.guide-toc__list a:hover {
+  color: #1B8A9A;
+}
+
+/* =============================================================
+   RESPONSIVE REFINEMENTS
+   ============================================================= */
+@media (max-width: 600px) {
+  .guide-article {
+    padding: 2rem 1rem;
+  }
+
+  .guide-hero {
+    min-height: 60vh;
+  }
+
+  .guide-cta-box {
+    padding: 2rem 1.25rem;
+  }
+
+  .species-card {
+    flex-direction: row;
+  }
+
+  .species-card__icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .guide-hero {
+    min-height: 72vh;
+  }
+
+  .guide-cta-box {
+    padding: 3.5rem;
+  }
+}
